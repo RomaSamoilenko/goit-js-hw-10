@@ -5,7 +5,9 @@
 
 
 
-
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -20,4 +22,64 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+.timer {
+  display: flex;
+  column-gap: 20px;
+}
+
+#datetime-picker {
+  margin-bottom: 20px;
+}
+
+button[data-start] {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 20%;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #14800c;
+  box-shadow: inset 0 3px 4px #ffffff, inset 0 -3px 4px #c4b59d;
+  transform: all 300ms linear;
+  animation: waves 2s ease-in-out infinite;
+}
+
+button[disabled] {
+  animation: none;
+  color: #fb0404;
+}
+
+@keyframes waves {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+input#datetime-picker {
+  width: 200px;
+  height: 32px;
+  border: none;
+  background: #dce1fb;
+  box-shadow: 0 6px 8px #c4b59d, 0 -2px 1px #fff;
+
+  text-align: center;
+  color: #fb0404;
+  font-weight: 600;
+}
+
+input#datetime-picker[disabled] {
+  color: #ab803c;
 }
