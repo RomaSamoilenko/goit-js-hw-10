@@ -1,7 +1,8 @@
+
 // Описаний в документації
 import flatpickr from "flatpickr";
 // Додатковий імпорт стилів
-import "flatpickr/dist/flatpickr.min.css";
+import "./flatpickr/dist/flatpickr.min.css";
 
 
 document.body.style.backgroundColor = 'rgb(224 210 224)';
